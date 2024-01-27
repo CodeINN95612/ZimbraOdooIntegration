@@ -1,0 +1,26 @@
+version: "3"
+services:
+  zimbra:
+    image: jorgedlcruz/zimbra
+    ports:
+      - "25:25"
+      - "82:80"
+      - "465:465"
+      - "587:587"
+      - "110:110"
+      - "143:143"
+      - "993:993"
+      - "995:995"
+      - "443:443"
+      - "8080:8080"
+      - "8443:8443"
+      - "7071:7071"
+      - "9071:9071"
+    hostname: zimbra-docker.zimbra.io
+    dns:
+      - 127.0.0.1
+      - 8.8.8.8
+    stdin_open: true
+    tty: true
+    environment:
+      PASSWORD: Zimbra2017
